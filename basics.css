@@ -49,3 +49,9 @@ h5 {
 p {
   font-size: 1.2em;
 }
+.elements {
+  color: #e06c60;
+}
+.value {
+  color: #d19a66;
+}

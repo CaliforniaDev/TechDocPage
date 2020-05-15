@@ -4,8 +4,8 @@
   <link rel="stylesheet" href="basics.css" type="text/css">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Roboto&display=swap" rel="stylesheet">
 </head>
-<nav id="nav-bar" class="nav-bar">
-  <img id="nav-logo" class="nav-logo" src="img/logo.png" alt="logo"/>
+<nav id="navbar" class="navbar">
+  <header>Introduction</header>
   <a href="#" class="nav-link active">Link1</a>
   <a href="#" class="nav-link">Link2</a>
   <a href="#" class="nav-link">Link3</a>
@@ -13,10 +13,17 @@
 </nav>
 <body>
 <main id="main-doc">
-  <section class="main-section">
-    <header>
-      <h1>Hello</h1>
-      <p>Hello World</p>
+  <section class="main-section" id="introduction">
+    <header>What is CSS?</header>
+      <article>
+      <p>Like HTML, Css is not a programming language. Its not a markup language
+      either. Css is a style sheet language. Css is what you use to selectively
+    style html elements. For example, this CSS selects paragraph text, setting
+  the color to red:</p>
+  <code><span class="elements">p</span> {
+    color: <span class="value">red</span>;
+  }</code>
+</article>
       <p></p>
       <p></p>
       <p></p>

@@ -1,4 +1,9 @@
 
+header {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
 nav {
   height: 100%;
   width: 12.5%;
@@ -7,11 +12,12 @@ nav {
   border: 1px solid #555;
   position: fixed;
   overflow: auto;
+  background-color: #f1f1f1;
+  cursor: pointer;
 }
 nav a {
   display: block;
   color: #000;
-  background-color: #f1f1f1;
   text-decoration: none;
   padding: 8px 16px;
   border-bottom: 1px solid #555;
@@ -33,4 +39,17 @@ nav a:hover{
   padding: 1px 16px;
   margin-left: 12.5%;
   height: 1000px;
+}
+section header {
+  text-align: left;
+}
+code {
+  display: block;
+  word-wrap: normal;
+  word-break: normal;
+  white-space: pre;
+  position: relative;
+  line-height: 2;
+  background-color: #282c34;
+  color: #7da5bf;
 }
