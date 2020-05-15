@@ -12,7 +12,7 @@ body, html {
   font-size: 17px;
   color: black;
   line-height: 1.6;
-  background-color:;
+  background-color: #f6f7ff;
   scroll-behavior: smooth;
 }
 .clear {
@@ -27,7 +27,7 @@ body, html {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'IBM Plex Sans', sans-serif;
 }
-p {
+p, a {
   font-family: 'Roboto', sans-serif;
 }
 h1 {
@@ -54,4 +54,10 @@ p {
 }
 .value {
   color: #d19a66;
+}
+.attribute {
+  color: #d19a66;
+}
+.attribute-value {
+  color: #7bc379
 }

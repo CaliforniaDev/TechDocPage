@@ -1,18 +1,21 @@
 
 header {
+  padding: 8px 16px;
   text-align: center;
   font-size: 1.5em;
+  font-weight: bold;
   font-family: 'IBM Plex Sans', sans-serif;
 }
 nav {
   height: 100%;
-  width: 12.5%;
-  margin: 0;
-  padding: 0;
-  border: 1px solid #555;
+  min-width: 290px;
+  top: 0;
+  left: 0;
   position: fixed;
   overflow: auto;
-  background-color: #f1f1f1;
+  border-right: solid;
+  background-color: #282c34;
+  color: #7da5bf;
   cursor: pointer;
 }
 nav a {
@@ -21,35 +24,65 @@ nav a {
   text-decoration: none;
   padding: 8px 16px;
   border-bottom: 1px solid #555;
+  color: #9f98ec;
+  font-weight: 500;
 }
 nav a:last-child {
   border-bottom: none;
 }
 nav a:hover{
-  background-color: #555;
+  background-color: #e06c60;
   color: white;
   text-align: right;
 }
+/*
 .active {
-  background-color: tomato;
-  color: white;
+  background-color: #555;
+  color: #d19a66;
 }
+*/
 #main-doc {
-  border: 5px solid green;
-  padding: 1px 16px;
-  margin-left: 12.5%;
-  height: 1000px;
+  position: absolute;
+  padding-top: 1%;
+  margin-left: 320px;
+  padding: 15px;
+  height: 2000px;
 }
 section header {
   text-align: left;
+
 }
+/*section article {
+  position: relative;
+  width: 80em;
+}*/
 code {
+  width: 60%;
   display: block;
   word-wrap: normal;
   word-break: normal;
   white-space: pre;
-  position: relative;
   line-height: 2;
   background-color: #282c34;
   color: #7da5bf;
-  padding: 10px;
+  margin: 1%;
+  padding: 20px;
+}
+li code:nth-child(4) {
+  white-space: normal;
+  width: 60%;
+  display: block;
+  word-wrap: normal;
+  word-break: normal;
+  line-height: 2;
+  background-color: #282c34;
+  color: #7da5bf;
+  margin: 1%;
+  padding: 20px;
+}
+mark {
+  background-color: rgba( 40, 44, 52, .8);
+
+  color: #f6f7ff;
+  padding: 2px 4px 2px 4px;
+}
