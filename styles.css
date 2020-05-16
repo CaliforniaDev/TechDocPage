@@ -41,12 +41,15 @@ nav a:hover{
   color: #d19a66;
 }
 */
-#main-doc {
+#main-doc  {
+  min-width: 600px;
   position: absolute;
   padding-top: 1%;
   margin-left: 320px;
   padding: 15px;
   height: 2000px;
+}
+.main-section {
 }
 section header {
   text-align: left;
@@ -62,23 +65,17 @@ code {
   word-wrap: normal;
   word-break: normal;
   white-space: pre;
-  line-height: 2;
+  line-height: 1.6;
   background-color: #282c34;
   color: #7da5bf;
-  margin: 1%;
+  margin: 4% auto 4% 3%;
   padding: 20px;
 }
-li code:nth-child(4) {
+ol code {       /*overrides code white-space from pre to normal */
   white-space: normal;
-  width: 60%;
-  display: block;
-  word-wrap: normal;
-  word-break: normal;
-  line-height: 2;
-  background-color: #282c34;
-  color: #7da5bf;
-  margin: 1%;
-  padding: 20px;
+}
+li {
+  margin-left: 9%;
 }
 mark {
   background-color: rgba( 40, 44, 52, .8);
