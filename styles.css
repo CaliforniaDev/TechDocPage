@@ -42,8 +42,6 @@ nav a:hover{
 }
 */
 #main-doc  {
-  min-width: 600px;
-  position: absolute;
   padding-top: 1%;
   margin-left: 320px;
   padding: 15px;
@@ -60,7 +58,7 @@ section header {
   width: 80em;
 }*/
 code {
-  width: 60%;
+  width: 80%;
   display: block;
   word-wrap: normal;
   word-break: normal;
@@ -70,6 +68,7 @@ code {
   color: #7da5bf;
   margin: 4% auto 4% 3%;
   padding: 20px;
+  overflow: auto;
 }
 ol code {       /*overrides code white-space from pre to normal */
   white-space: normal;

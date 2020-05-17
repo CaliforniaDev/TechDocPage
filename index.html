@@ -1,6 +1,6 @@
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css" type="text/css">
   <link rel="stylesheet" href="basics.css" type="text/css">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Roboto&display=swap" rel="stylesheet">
@@ -110,8 +110,21 @@ you can use as a value.</p>
       <p>Our starting point is an HTML document. YOu can copy the code from below
         if you want to work on your own computer. SAve the code below as index.html
         in a folder on your machine.</p>
-        <code><!doctype html>
-        < html lang="en" ></code>
+        <code>&lt;!doctype html&gt;
+&lt;<span class="elements">html</span> <span class="attribute">lang</span>="<span class="attribute-value">en</span>"&gt;
+&lt;<span class="elements">head</span>&gt;
+  &lt;<span class="elements">meta</span> <span class="attribute">charset</span>="<span class="attribute-value">utf-8</span>"&gt;
+  &lt;<span class="elements">title</span>&gt;Getting started with CSS&lt;<span class="elements">title</span>&gt;
+  &lt;/<span class="elements">head</span>&gt;
+
+&lt;<span class="elements">body</span>&gt;
+
+  &lt;<span class="elements">h1</span>&gt;I am a level one heading&lt;<span class="elements">h1</span>&gt;
+
+  &lt;<span class="elements">p</span>&gt;This is a paragraph of text. In the text is a &lt;<span class="elements">span</span>&gt;span element&lt;/<span class="elements">span</span>&gt;
+  and also a &lt;<span class="elements">a</span> href="http://example.com"&gt;link&lt;/<span class="elements">a</span>&gt;.&lt;/<span class="elements">p</span>&gt;
+
+  &lt;p&gt;This is the second paragraph. It contains an &lt;em&gt;emphasized&lt;/em&gt; element.&lt;/p&gt;</code>
     </article>
   </section>
 
