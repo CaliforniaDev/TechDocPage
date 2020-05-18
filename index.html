@@ -1,10 +1,14 @@
 <html lang="en">
+
+
 <head>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css" type="text/css">
   <link rel="stylesheet" href="basics.css" type="text/css">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Roboto&display=swap" rel="stylesheet">
 </head>
+
+
 <nav id="navbar" class="navbar">
   <header>CSS Documentation</header>
   <a href="#what_is_css" class="nav-link active">What is CSS?</a>
@@ -12,49 +16,57 @@
   <a href="#starting_with_some_html" class="nav-link">Starting with some HTML</a>
   <a href="#" class="nav-link">Link4</a>
 </nav>
+
+
 <body>
+
+
 <main id="main-doc">
+
   <section class="main-section" id="what_is_css">
-    <header>What is CSS?</header>
-      <article>
+   <header>What is CSS?</header>
+    <article>
       <p>Like HTML, CSS is not a programming language. Its not a markup language
-      either. <b>CSS is a style sheet language.</b>
-      Css is what you use to selectively style html elements. For example,
-      this CSS selects paragraph text, setting the color to red:</p>
-  <code><span class="elements" class="border-left">p</span> {
-    color: <span class="value">red</span>;
-  } </code>
-    <p>Let's try it out! Using a text editor, paste the three lines of CSS (above)
-      into a new file. Save the file as
-      <mark>style.css</mark>
-      in a directory named <mark>styles</mark>.</p>
+        either. <b>CSS is a style sheet language.</b>
+        Css is what you use to selectively style html elements. For example,
+        this CSS selects paragraph text, setting the color to red:</p>
+          <code>
+             <span class="elements">p</span>{<br>
+             color: <span class="value">red</span>;<br>
+             }
+          </code>
+      <p>Let's try it out! Using a text editor, paste the three lines of CSS (above)
+             into a new file. Save the file as <mark>style.css</mark>
+             in a directory named <mark>styles</mark>.</p>
       <p>To Make the code work, we will neeed to apply this CSS (above) to your HTML document.
-        Otherwise, the stlying won't change the appearance of the HTML.</p><br>
+             Otherwise, the stlying won't change the appearance of the HTML.</p>
+             <br>
         <ol>
           <li>
             Open your <mark>index.html</mark> file. Paste the following line in the head
-           (between the <mark>< head ></mark> and the <mark>< /head ></mark> tages):
-       </li>
-       <code> <!--white-space: normal -->
+           (between the <mark>&lt;head&gt;</mark> and the <mark>&lt;/head&gt;</mark> tages):
+          </li>
+      <code>
          <<span class="elements">link</span>
          <span class="attribute">href</span>=<span class="attribute-value">"styles/styles.css"</span>
          <span class="attribute">rel=</span><span class="attribute-value">"stylesheet"</span>>
-       </code>
+      </code>
           <li>
             Save <mark>index.html</mark> and load it in your browser. You should see
-              something like this:
+            something like this:
           </li>
         </ol>
-        <p style="padding-bottom: 10%;">
+      <p style="padding-bottom: 10%;">
           <img alt="A mozilla logo and some paragraphs. The paragraph text has
           been styled red by our css." src="img/website-screenshot-styled.png"
           style="display: block; height: 832px; margin: 0px auto; width: 711px;">
-          If your paragraph text is red, congratulations! Your CSS is working.
-        </p>
-  </article>
-  </section>
+          If your paragraph text is red, congratulations! Your CSS is working.</p>
+    </article>
+  </section>                   <!--End of Section #1 -->
+
+
   <section class="main-section" id="css_syntax">
-  <article>
+    <article>
       <header>CSS Syntax</header>
       <p>
         CSS is a rule-based language &mdash; you define rules specifying groups
@@ -63,68 +75,108 @@
         to be shown as large red text."</p>
       <p>
         The following code shows a very simple CSS rule that would achieve the styling
-      described above:</p>
-      <code><span class="elements">h1</span> {
-      color: <span class="value">red</span>;
-      font-size: <span class="value">5em</span>;
-    } </code>
-    <p>The rule opens with a selector. this selects the HTML elements that we are going
-    to style. In this case we are styling level one headings.</p>
-
-    <br>
-
-    <p>We then have a set of curly braces <mark>{ }</mark>. Inside those will be one or more
+        described above:</p>
+          <code>
+            <span class="elements">h1</span> {<br>
+            color: <span class="value">red</span>;<br>
+            font-size: <span class="value">5em</span>;<br>
+            }
+          </code>
+      <p>The rule opens with a selector. this selects the HTML elements that we are going
+       to style. In this case we are styling level one headings.</p><br>
+      <p>We then have a set of curly braces <mark>{ }</mark>. Inside those will be one or more
       <b>declarations</b>, which take the form of <b>property</b> and <b>value</b> pairs.
       Each pair specfies a property of the element(s) we are selecting, then a value that
-      we'd like to give the property.</p>
-
-      <br>
-
+      we'd like to give the property.</p><br>
       <p>Before the colon, we have the property, and after the colon, the value. CSS properties
         have different allowable values, depending on which property is being specified.
         In our example, we have the <mark>color</mark> property, which can take various
         color values. We also have the <mark>font-size</mark> property. This property can take various
-        size units as a value.</p>
+        size units as a value.</p><br>
+      <p>A CSS stylesheet will contain many such rules, written one after the other.</p>
 
-        <br>
+          <code><span class="elements">h1</span> {<br>
+            color: <span class="value">red</span>;<br>
+            font-size: <span class="value">5em</span>;<br>
+          }<br>
+           <br>
+            <span class="elements">p</span> {<br>
+            color: <span class="value">black</span>;<br>
+          }
+          </code>
 
-        <p>
-          A CSS stylesheet will contain many such rules, written one after the other.</p>
-          <code><span class="elements">h1</span> {
-      color: <span class="value">red</span>;
-      font-size: <span class="value">5em</span>;
-    }
 
-<span class="elements">p</span> {
-      color: <span class="value">black</span>;
-    }</code>
     <p>You will find that you quickly learn some values, whereas other you will
-    need to look up. The individual property pages on MDN give you a quick way
-  to look up properties and their values when you foget, or want to know what else
-you can use as a value.</p>
+       need to look up. The individual property pages on MDN give you a quick way
+       to look up properties and their values when you foget, or want to know what else
+       you can use as a value.</p>
     </article>
-  </section>
+  </section>                    <!--End of Section #2 -->
+
+
   <section class="main-section" id="starting_with_some_html">
     <article>
       <header>Starting with some HTML</header>
-      <p>Our starting point is an HTML document. YOu can copy the code from below
-        if you want to work on your own computer. SAve the code below as index.html
+      <p>Our starting point is an HTML document. You can copy the code from below
+        if you want to work on your own computer. Save the code below as index.html
         in a folder on your machine.</p>
-        <code>&lt;!doctype html&gt;
-&lt;<span class="elements">html</span> <span class="attribute">lang</span>="<span class="attribute-value">en</span>"&gt;
-&lt;<span class="elements">head</span>&gt;
-  &lt;<span class="elements">meta</span> <span class="attribute">charset</span>="<span class="attribute-value">utf-8</span>"&gt;
-  &lt;<span class="elements">title</span>&gt;Getting started with CSS&lt;<span class="elements">title</span>&gt;
-  &lt;/<span class="elements">head</span>&gt;
 
-&lt;<span class="elements">body</span>&gt;
 
-  &lt;<span class="elements">h1</span>&gt;I am a level one heading&lt;<span class="elements">h1</span>&gt;
+         <code>&lt;!doctype html&gt;<br>                   <!-- Code white-space: pre; -->
+            &lt;<span class="elements">html</span>
+                <span class="attribute">lang</span>=
+                "<span class="attribute-value">en</span>"&gt;<br>
+            &lt;<span class="elements">head</span>&gt;<br>
+            &nbsp;&nbsp;&nbsp; &lt;<span class="elements">meta</span>
+                <span class="attribute">charset</span>=
+                "<span class="attribute-value">utf-8</span>"&gt;<br>
+            &nbsp;&nbsp;&nbsp; &lt;<span class="elements">title</span>&gt;Getting started with CSS
+                               &lt;<span class="elements">/title</span>&gt;<br>
+                               &lt;/<span class="elements">head</span>&gt;
 
-  &lt;<span class="elements">p</span>&gt;This is a paragraph of text. In the text is a &lt;<span class="elements">span</span>&gt;span element&lt;/<span class="elements">span</span>&gt;
-  and also a &lt;<span class="elements">a</span> href="http://example.com"&gt;link&lt;/<span class="elements">a</span>&gt;.&lt;/<span class="elements">p</span>&gt;
+                               <br><br>
 
-  &lt;p&gt;This is the second paragraph. It contains an &lt;em&gt;emphasized&lt;/em&gt; element.&lt;/p&gt;</code>
+            &lt;<span class="elements">body</span>&gt;<br>
+            &nbsp;&nbsp;&nbsp; &lt;<span class="elements">h1</span>&gt;I am a level one heading
+                               &lt;<span class="elements">h1</span>&gt;
+
+                               <br><br>
+
+            &nbsp;&nbsp;&nbsp; &lt;<span class="elements">p</span>&gt;This is a paragraph of text. In the text is a
+            &lt;<span class="elements">span</span>&gt;span element&lt;/<span class="elements">span</span>&gt;<br>and also a
+            &lt;<span class="elements">a</span>
+                <span class="attribute">href</span>=
+               "<span class="attribute-value">http://example.com</span>"&gt;link&lt;/<span class="elements">a</span>&gt;.&lt;/<span class="elements">p</span>&gt;
+
+                               <br><br>
+
+            &nbsp;&nbsp;&nbsp; &lt;<span class="elements">p</span>&gt;This is the second paragraph. It contains an
+                               &lt;<span class="elements">em</span>&gt;emphasized&lt;/<span class="elements">em</span>&gt;
+                       element.&lt;/<span class="elements">p</span>&gt;
+                               <br><br>
+        </code>
+    </article>
+  </section>
+                                      <!-- End of Section 3 -->
+
+  <section class="main-section">
+    <header>Adding CSS to our document</header>
+    <article>
+      <p>
+        THe very first tthing we need to do is tell the HTML document that we have
+        some CSS rules we want it to use. THere are three differeent way to apply
+        CSS to an HTMl document that you'll commonly come across, howeever, for
+        now, we will loook at the most usual and use ful way of
+        doing so &mdash; linking CSS from the head of you document.</p>
+        <p>
+          Create a file in the same folder your HTML document and save it as
+        <mark>styles.css</mark>. The <mark>.css</mark> extension shows
+        that this is a CSS file.</p>
+        <p>
+          To link <mark>styles.css</mark> to <mark>index.html</mark> add the following
+          line somewhere inside  the <mark>&lt;head&gt;</mark> of the HTML document:</p>
+
+          <code>&lt;<span class="elements">link</span> <span class="attribute">rel</span>="<span class="attribute-value">stylesheet</span>" <span class="attribute">href</span>="<span class="attribute-value">styles.css</span>"&gt;</code>
     </article>
   </section>
 

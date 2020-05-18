@@ -62,7 +62,6 @@ code {
   display: block;
   word-wrap: normal;
   word-break: normal;
-  white-space: pre;
   line-height: 1.6;
   background-color: #282c34;
   color: #7da5bf;
@@ -70,9 +69,7 @@ code {
   padding: 20px;
   overflow: auto;
 }
-ol code {       /*overrides code white-space from pre to normal */
-  white-space: normal;
-}
+
 li {
   margin-left: 9%;
 }
