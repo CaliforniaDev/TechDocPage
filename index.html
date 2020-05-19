@@ -14,7 +14,10 @@
   <a href="#what_is_css" class="nav-link active">What is CSS?</a>
   <a href="#css_syntax" class="nav-link">CSS Syntax</a>
   <a href="#starting_with_some_html" class="nav-link">Starting with some HTML</a>
-  <a href="#" class="nav-link">Link4</a>
+  <a href="#adding_css_to_our_document" class="nav-link">Adding CSS to our document</a>
+  <a href="#styling_html_elements" class="nav-link">Styling HTML elements</a>
+  <a href="#adding_a_class" class="nav-link">Adding a class</a>
+  <a href="#reference" class="nav-link">Reference</a>
 </nav>
 
 
@@ -31,9 +34,9 @@
         Css is what you use to selectively style html elements. For example,
         this CSS selects paragraph text, setting the color to red:</p>
           <code>
-             <span class="elements">p</span>{<br>
-             color: <span class="value">red</span>;<br>
-             }
+             <span class="elements">p</span> {<br>
+              &nbsp;&nbsp;color:
+               <span class="value">red</span>;<br>}
           </code>
       <p>Let's try it out! Using a text editor, paste the three lines of CSS (above)
              into a new file. Save the file as <mark>style.css</mark>
@@ -76,12 +79,15 @@
       <p>
         The following code shows a very simple CSS rule that would achieve the styling
         described above:</p>
+
           <code>
             <span class="elements">h1</span> {<br>
-            color: <span class="value">red</span>;<br>
-            font-size: <span class="value">5em</span>;<br>
-            }
-          </code>
+             &nbsp;&nbsp;color:
+              <span class="value">red</span>;<br>
+               &nbsp;&nbsp;font-size:
+               <span class="value">5em</span>;<br>}
+             </code>
+
       <p>The rule opens with a selector. this selects the HTML elements that we are going
        to style. In this case we are styling level one headings.</p><br>
       <p>We then have a set of curly braces <mark>{ }</mark>. Inside those will be one or more
@@ -96,14 +102,16 @@
       <p>A CSS stylesheet will contain many such rules, written one after the other.</p>
 
           <code><span class="elements">h1</span> {<br>
-            color: <span class="value">red</span>;<br>
-            font-size: <span class="value">5em</span>;<br>
-          }<br>
-           <br>
-            <span class="elements">p</span> {<br>
-            color: <span class="value">black</span>;<br>
-          }
-          </code>
+                  &nbsp;&nbsp;color:
+                   <span class="value">red</span>;<br>
+                    &nbsp;&nbsp;font-size:
+                     <span class="value">5em</span>;<br>
+                     }<br><br>
+
+                <span class="elements">p</span> {<br>
+                  &nbsp;&nbsp;color:
+                  <span class="value">black</span>;<br>}
+            </code>
 
 
     <p>You will find that you quickly learn some values, whereas other you will
@@ -118,18 +126,18 @@
     <article>
       <header>Starting with some HTML</header>
       <p>Our starting point is an HTML document. You can copy the code from below
-        if you want to work on your own computer. Save the code below as index.html
-        in a folder on your machine.</p>
+         if you want to work on your own computer. Save the code below as index.html
+         in a folder on your machine.</p>
 
 
-         <code>&lt;!doctype html&gt;<br>                   <!-- Code white-space: pre; -->
+         <code>&lt;!doctype html&gt;<br>
             &lt;<span class="elements">html</span>
                 <span class="attribute">lang</span>=
-                "<span class="attribute-value">en</span>"&gt;<br>
+                <span class="attribute-value">"en"</span>&gt;<br>
             &lt;<span class="elements">head</span>&gt;<br>
             &nbsp;&nbsp;&nbsp; &lt;<span class="elements">meta</span>
                 <span class="attribute">charset</span>=
-                "<span class="attribute-value">utf-8</span>"&gt;<br>
+                <span class="attribute-value">"utf-8"</span>&gt;<br>
             &nbsp;&nbsp;&nbsp; &lt;<span class="elements">title</span>&gt;Getting started with CSS
                                &lt;<span class="elements">/title</span>&gt;<br>
                                &lt;/<span class="elements">head</span>&gt;
@@ -146,7 +154,7 @@
             &lt;<span class="elements">span</span>&gt;span element&lt;/<span class="elements">span</span>&gt;<br>and also a
             &lt;<span class="elements">a</span>
                 <span class="attribute">href</span>=
-               "<span class="attribute-value">http://example.com</span>"&gt;link&lt;/<span class="elements">a</span>&gt;.&lt;/<span class="elements">p</span>&gt;
+                <span class="attribute-value">"http://example.com"</span>&gt;link&lt;/<span class="elements">a</span>&gt;.&lt;/<span class="elements">p</span>&gt;
 
                                <br><br>
 
@@ -165,29 +173,141 @@
             &lt;/<span class="elements">body</span>&gt;
               <br><br>
             &lt;/<span class="elements">html</span>&gt;
-        </code>
+        </code>               <!-- End of Code-->
     </article>
   </section>
                                       <!-- End of Section 3 -->
 
-  <section class="main-section">
+  <section class="main-section" id="adding_css_to_our_document">
     <header>Adding CSS to our document</header>
     <article>
-      <p>
-        THe very first tthing we need to do is tell the HTML document that we have
-        some CSS rules we want it to use. THere are three differeent way to apply
-        CSS to an HTMl document that you'll commonly come across, howeever, for
-        now, we will loook at the most usual and use ful way of
-        doing so &mdash; linking CSS from the head of you document.</p>
-        <p>
-          Create a file in the same folder your HTML document and save it as
-        <mark>styles.css</mark>. The <mark>.css</mark> extension shows
-        that this is a CSS file.</p>
-        <p>
-          To link <mark>styles.css</mark> to <mark>index.html</mark> add the following
+      <p>The very first tthing we need to do is tell the HTML document that we have
+         some CSS rules we want it to use. THere are three differeent way to apply
+         CSS to an HTMl document that you'll commonly come across, howeever, for
+         now, we will loook at the most usual and use ful way of
+         doing so &mdash; linking CSS from the head of you document.</p><br>
+      <p>Create a file in the same folder your HTML document and save it as
+         <mark>styles.css</mark>. The <mark>.css</mark> extension shows
+         that this is a CSS file.</p>
+         <br>
+      <p>To link <mark>styles.css</mark> to <mark>index.html</mark> add the following
           line somewhere inside  the <mark>&lt;head&gt;</mark> of the HTML document:</p>
 
-          <code>&lt;<span class="elements">link</span> <span class="attribute">rel</span>="<span class="attribute-value">stylesheet</span>" <span class="attribute">href</span>="<span class="attribute-value">styles.css</span>"&gt;</code>
+          <code>&lt;<span class="elements">link</span> <span class="attribute">rel</span>=<span class="attribute-value">"stylesheet"</span>
+                    <span class="attribute">href</span>=<span class="attribute-value">"styles.css"</span>&gt;
+         </code>
+      <p>This &lt;<mark>link</mark>&gt; element tells the browser that we have a
+        stylesheet, using the rel attribute, and the location of that stylesheet
+        as the value of the <mark>href</mark> attribute. You can test that the CSS
+        works by adding a rule to <mark>styles.css</mark>. Using your code editor
+        add the following to you CSS file:</p>
+      <br><br>
+    </article>
+  </section>
+  <section class="main-section" id="styling_html_elements">
+    <header>Styling HTML elements</header>
+    <article>
+      <p>By making our heading red we have already demostrated that we can
+        target and style an HTML element. We do this by targeting an <b><i>element selector</i></b> &mdash;
+        this is a a selector that directly matches an HTML name. To target all
+        paragraphs in the document you would use the selector <mark>p</mark>. To turn
+        all paragraphs green you would use:</p>
+        <code><span class="elements">p</span> {<br>
+              &nbsp;&nbsp;color:
+              <span class="value">green</span>;<br>
+            }</code>
+      <p>You can target multiple selectors at once, by seperating the selectors
+        with a comma. If I want all paragraphs and all list items to be green my
+        rule looks like this:</p>
+        <code><span class="elements">p</span>
+              <span class="css-comma">,</span>
+              <span class="elements">li</span> {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:
+              <span class="value">green</span>;<br>
+            }</code>
+    </article>
+  </section>
+  <section class="main-section" id="adding_a_class">
+    <header>Adding a class</header>
+    <article>
+      <p>So far we have styled elements based on their HTML elements names. this
+        works as long as you want all of the elements of that type in your document
+        to look the same. Most of the time that isn't the case and so you will need
+        to find a way to select subset of the elements without changing the others.
+        The most common way to do this is to add a class to your HTML element and target
+        that class.</p><br><br>
+
+        <p>In you HTML document, add a class <em><b>class attribute</b></em> to the second
+          list item. Your list will now look like this:</p>
+         <code>&lt;<span class="elements">ul</span>&gt;<br>
+           &nbsp;&nbsp; &lt;<span class="elements">li</span>&gt;Item one&lt;/<span class="elements">li</span>&gt;<br>
+           &nbsp;&nbsp; &lt;<span class="elements">li</span>
+        <!--Added class to existing list-->
+           <span class="attribute">class=</span><span class="attribute-value">"special"</span>&gt;Item two&lt;/<span class="elements">li</span>&gt;<br>
+        <!--Added class to existing list-->
+            &nbsp;&nbsp; &lt;<span class="elements">li</span>&gt;Item
+                     &lt;<span class="elements">em</span>&gt;three&lt;/<span class="elements">em</span>&gt;&lt;/<span class="elements">li</span>&gt;<br>
+                     &lt;/<span class="elements">ul</span>&gt;
+        </code>
+
+        <p>In your CSS you can target the class of <mark>special</mark> by creating a selector
+          that starts with a full stop character. Add the following to your CSS file:</p>
+
+          <code>
+            <span class="attribute">.special</span> {<br>
+             &nbsp;&nbsp;color:
+              <span class="value">orange</span>;<br>
+               &nbsp;&nbsp;font-weight:
+               <span class="value">bold</span>;<br>}
+             </code>
+
+          <p>Save and refresh to see what the result is.</p><br>
+          <p>You can apply the class of <mark>special</mark> to any element on your page that
+            you want to have the same look as this list item. For example, you
+             might want the <mark>&lt;span&gt;</mark> in the paragraph to also be orange and bold.
+              Try adding a <mark>class</mark> of <mark>special</mark> to it, then reload your page and see
+                what happens.</p><br>
+          <p>Sometimes you will see rules with a selector that lists the HTML
+            element selector along with the class:</p>
+            <code>
+              <span class="elements">li</span><span class="attribute">.special</span> {<br>
+               &nbsp;&nbsp;color:
+                <span class="value">orange</span>;<br>
+                 &nbsp;&nbsp;font-weight:
+                 <span class="value">bold</span>;<br>}
+               </code>
+          <p>This syntax means "target any li element that has a class of
+            special". If you were to do this then you would no longer be able
+            to apply the class to a <mark>&lt;span&gt;</mark> or another element
+            by simply adding the class to it; you would have to add that element
+            to the list of selectors:</p>
+            <code>
+              <span class="elements">li</span><span class="attribute">.special</span><span class="css-comma">,</span><br>
+                <span class="elements">span</span><span class="attribute">.special</span> {<br>
+                  &nbsp;&nbsp;color:
+                  <span class="value">orange</span>;<br>
+                   &nbsp;&nbsp;font-weight:
+                   <span class="value">bold</span>;<br>}
+               </code>
+           <p>As you can imagine, some classes might be applied to many elements
+             and you don't want to have to keep editing your CSS every time
+             something new needs to take on that style. Therefore it is sometimes
+             best to bypass the element and simply refer to the class, unless
+             you know that you want to create some special rules for one element
+             alone, and perhaps want to make sure they are not
+             applied to other things.</p>
+
+
+    </article>
+  </section>
+  <section class="main-section" id="reference">
+    <header>Reference</header>
+    <article>
+      <ul>
+        <li>All the documentation in this page is taken from
+          <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started">
+            MDN</a>
+      </ul>
     </article>
   </section>
 

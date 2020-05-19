@@ -59,6 +59,9 @@ p {
 .attribute {
   color: #d19a66;
 }
-.attribute-value {
+.attribute-value , .class-selector {
   color: #7bc379
+}
+.css-comma {
+  color: #c678bd
 }
