@@ -35,28 +35,16 @@ nav a:hover{
   color: white;
   text-align: right;
 }
-/*
-.active {
-  background-color: #555;
-  color: #d19a66;
-}
-*/
 #main-doc  {
   padding-top: 1%;
   margin-left: 320px;
   padding: 15px;
   height: 1000vh;
 }
-.main-section {
-}
 section header {
   text-align: left;
 
 }
-/*section article {
-  position: relative;
-  width: 80em;
-}*/
 code {
   width: 80%;
   display: block;
@@ -78,4 +66,19 @@ mark {
 
   color: #f6f7ff;
   padding: 2px 4px 2px 4px;
+}
+@media only screen and (max-width: 768px) {
+  /*For mobile phones: */
+  section , #main-doc, .main-section {
+    width: 100%;
+    justify-content: center;
+    margin: 0%;
+    padding: 0%;
+  }
+  nav {
+    width: 100%;
+    top: 0;
+    height: auto;
+    position: static;
+  }
 }

@@ -15,14 +15,6 @@ body, html {
   background-color: #f6f7ff;
   scroll-behavior: smooth;
 }
-.clear {
-  clear: both;
-}
-.right {
-  float: right;
-}
-.left {
-  float: left;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'IBM Plex Sans', sans-serif;
@@ -59,7 +51,7 @@ p {
 .attribute {
   color: #d19a66;
 }
-.attribute-value , .class-selector {
+.attribute-value {
   color: #7bc379
 }
 .css-comma {
